@@ -192,7 +192,8 @@ app.post("/sms", (req, res) => {
   res.end(twiml.toString());
   console.log("Somebody texted you");
 });
+var port = process.env.PORT || 8000;
 
-http.createServer(app).listen(1337, () => {
+http.createServer(app).listen(port, () => {
   console.log("Express server listening on port 1337");
 });
